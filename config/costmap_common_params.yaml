@@ -26,12 +26,12 @@ obstacle_layer:
   obstacle_range: 2.5
   raytrace_range: 3.5
   observation_sources: camera_scan
-  camera_scan: {sensor_frame: laser, data_type: LaserScan, topic: camera/scan, marking: true, clearing: true, inf_is_valid: true}
+  camera_scan: {sensor_frame: camera_aligned_depth_to_color_frame, data_type: LaserScan, topic: camera/scan, marking: true, clearing: true, inf_is_valid: true}
 #膨胀半径，扩展在碰撞区域以外的代价区域，给定机器人与障碍物之间必须要保持的最小距离
 inflation_layer: 
   enabled: true
   cost_scaling_factor: 2.58
-  inflation_radius: 0.4
+  inflation_radius: 0.3
 #代价地图精度，即每个网格的尺寸
 static_layer: 
   enabled: true
