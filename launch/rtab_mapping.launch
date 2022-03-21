@@ -1,9 +1,10 @@
 <?xml version="1.0"?>
 <launch>
-	<include file="$(find habitat_navigation)/launch/depthimage_to_laserscan.launch"/>
+	<include file="$(find rtab_navigation)/launch/depthimage_to_laserscan.launch"/>
   <!-- robot_description -->
          <include file="$(find ep_description)/launch/ep_description.launch"/>
-<!--  <include file="$(find habitat_navigation)/launch/move_base.launch"/>-->
+         <include file="$(find ep_teleop)/launch/joy_stick.launch"/>
+<!--  <include file="$(find rtab_navigation)/launch/move_base.launch"/>-->
   
   <arg name="database_path"     default="rtabmap.db"/>
   <arg name="rgbd_odometry"     default="true"/>
@@ -29,7 +30,7 @@
   <arg name="gftt_min_distance" default="5" /> 
   -->
   <arg name="rviz"                    default="true" />
-  <arg name="rviz_cfg"                default="$(find ep_navigation)/rviz/rtab.rviz" />
+  <arg name="rviz_cfg"                default="$(find rtab_navigation)/rviz/rtab.rviz" />
   
   <!-- Mapping -->
   <group ns="rtabmap">

@@ -17,7 +17,7 @@
 #将机器人的几何参数告诉导航功能包集，footprint表示多边形面积，robot_radius表示圆形
 #footprint: [[0.145, 0.145], [0.145, -0.145], [-0.145, -0.145], [-0.145, 0.145]] 
 footprint: [[-0.145, -0.145], [-0.145, 0.145], [0.145, 0.145], [0.145, -0.145]] 
-#robot_radius: 0.175
+#robot_radius: 0.05
 
 obstacle_layer: 
   enabled: true
@@ -30,8 +30,8 @@ obstacle_layer:
 #膨胀半径，扩展在碰撞区域以外的代价区域，给定机器人与障碍物之间必须要保持的最小距离
 inflation_layer: 
   enabled: true
-  cost_scaling_factor: 2.58
-  inflation_radius: 0.3
+  cost_scaling_factor: 10.0
+  inflation_radius: 0.1
 #代价地图精度，即每个网格的尺寸
 static_layer: 
   enabled: true
